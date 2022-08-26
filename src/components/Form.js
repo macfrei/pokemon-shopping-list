@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid";
+import "./Form.css";
 
 export default function Form({ onAddItem }) {
   function handleSubmit(event) {
@@ -16,10 +17,12 @@ export default function Form({ onAddItem }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="Form" onSubmit={handleSubmit}>
       <label htmlFor="itemName">Shopping list item</label>
       <input type="text" id="itemName" name="name" />
-      <button type="submit">Add item</button>
+      <button className="Form__button" type="submit">
+        Add item
+      </button>
     </form>
   );
 }
