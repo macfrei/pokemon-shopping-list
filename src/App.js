@@ -13,6 +13,11 @@ function App() {
   return (
     <div className="App">
       <h1>Pokemon Shopping List</h1>
+      <form>
+        <label htmlFor="itemName">Shopping list item</label>
+        <input type="text" id="itemName" name="name" />
+        <button type="submit">Add item</button>
+      </form>
       <ul className="App__list">
         {shoppingList.map((item) => (
           <ShoppingListItem name={item.name} key={item.id} />
