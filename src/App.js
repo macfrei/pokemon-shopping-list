@@ -18,13 +18,22 @@ function App() {
     setShoppingList([newItem, ...shoppingList]);
   }
 
+  function deleteItem(id) {
+    const newShoppingList = shoppingList.filter((item) => item.id !== id);
+    setShoppingList(newShoppingList);
+  }
+
   return (
     <div className="App">
       <h1>Pokemon Shopping List</h1>
       <Form onAddItem={addItem} />
       <ul className="App__list">
         {shoppingList.map((item) => (
-          <ShoppingListItem name={item.name} key={item.id} />
+          <ShoppingListItem
+            name={item.name}
+            key={item.id}
+            onDelete={() => deleteItem(item.id)}
+          />
         ))}
       </ul>
     </div>
