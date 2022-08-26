@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./ShoppingListItem.css";
 
 export default function ShoppingListItem({
