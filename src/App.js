@@ -23,6 +23,19 @@ function App() {
     setShoppingList(newShoppingList);
   }
 
+  function handleComplete(id) {
+    const index = shoppingList.findIndex((item) => item.id === id);
+    const item = shoppingList.find((item) => item.id === id);
+
+    const updatedList = [
+      ...shoppingList.slice(0, index),
+      { ...item, isDone: !item.isDone },
+      ...shoppingList.slice(index + 1),
+    ];
+
+    setShoppingList(updatedList);
+  }
+
   return (
     <div className="App">
       <h1>Pokemon Shopping List</h1>
@@ -33,6 +46,8 @@ function App() {
             name={item.name}
             key={item.id}
             onDelete={() => deleteItem(item.id)}
+            onComplete={() => handleComplete(item.id)}
+            isDone={item.isDone}
           />
         ))}
       </ul>
