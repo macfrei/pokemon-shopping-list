@@ -3,3 +3,7 @@
   background-color: transparent;
   color: red;
 }
+
+.ListItem__strike-through {
+  text-decoration: line-through;
+}
