@@ -10,7 +10,7 @@ export default function ShoppingListItem({
 
   return (
     <li>
-      <input onChange={onComplete} type="checkbox" id={name} />
+      <input onChange={onComplete} type="checkbox" id={name} checked={isDone} />
       <label htmlFor={name} className={className}>
         {name}
       </label>

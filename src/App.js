@@ -1,7 +1,7 @@
-import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import ShoppingListItem from "./components/ShoppingListItem";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 const initialShoppingList = [
   { name: "Potion", id: "1" },
@@ -12,7 +12,10 @@ const initialShoppingList = [
 ];
 
 function App() {
-  const [shoppingList, setShoppingList] = useState(initialShoppingList);
+  const [shoppingList, setShoppingList] = useLocalStorage(
+    "pkm-shopping-list",
+    initialShoppingList
+  );
 
   function addItem(newItem) {
     setShoppingList([newItem, ...shoppingList]);
