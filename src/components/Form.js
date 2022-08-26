@@ -17,7 +17,7 @@ export default function Form({ onAddItem }) {
   }
 
   return (
-    <form className="Form" onSubmit={handleSubmit}>
+    <form className="Form" onSubmit={handleSubmit} autoComplete="off">
       <label htmlFor="itemName">Shopping list item</label>
       <input type="text" id="itemName" name="name" />
       <button className="Form__button" type="submit">
