@@ -1,4 +1,5 @@
 import "./App.css";
+import ShoppingListItem from "./components/ShoppingListItem";
 
 const shoppingList = [
   { name: "Potion", id: "1" },
@@ -11,6 +12,7 @@ const shoppingList = [
 function App() {
   return (
     <div className="App">
+      <h1>Pokemon Shopping List</h1>
       <ul className="App__list">
         {shoppingList.map((item) => (
           <ShoppingListItem name={item.name} key={item.id} />
