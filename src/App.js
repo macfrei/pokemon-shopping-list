@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <ul className="App__list">
         {shoppingList.map((item) => (
-          <li key={item.id}>{item.name}</li>
+          <ShoppingListItem name={item.name} key={item.id} />
         ))}
       </ul>
     </div>
