@@ -1,7 +1,9 @@
+import { useState } from "react";
 import "./App.css";
+import Form from "./components/Form";
 import ShoppingListItem from "./components/ShoppingListItem";
 
-const shoppingList = [
+const initialShoppingList = [
   { name: "Potion", id: "1" },
   { name: "Pokeball", id: "2" },
   { name: "Para Healer", id: "3" },
@@ -10,9 +12,16 @@ const shoppingList = [
 ];
 
 function App() {
+  const [shoppingList, setShoppingList] = useState(initialShoppingList);
+
+  function addItem(newItem) {
+    setShoppingList([newItem, ...shoppingList]);
+  }
+
   return (
     <div className="App">
       <h1>Pokemon Shopping List</h1>
+      <Form onAddItem={addItem} />
       <ul className="App__list">
         {shoppingList.map((item) => (
           <ShoppingListItem name={item.name} key={item.id} />

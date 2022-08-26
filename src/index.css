@@ -9,3 +9,9 @@ body {
   margin: 0 auto;
   max-width: 500px;
 }
+
+input,
+button {
+  padding: 6px;
+  font-size: 1rem;
+}
