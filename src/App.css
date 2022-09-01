@@ -1,0 +1,11 @@
+.App {
+  display: grid;
+  gap: 12px;
+}
+
+.App__list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}

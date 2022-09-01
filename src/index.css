@@ -5,4 +5,13 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+input,
+button {
+  padding: 6px;
+  font-size: 1rem;
 }
