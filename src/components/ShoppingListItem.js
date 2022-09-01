@@ -14,6 +14,7 @@ export default function ShoppingListItem({
       <label htmlFor={name} className={className}>
         {name}
       </label>
+
       <button
         className="ListItem__button"
         onClick={onDelete}
