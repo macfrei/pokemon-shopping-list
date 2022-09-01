@@ -5,7 +5,7 @@ export default function Form({ onAddItem }) {
   function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;
-    const input = event.target.name;
+    const input = form.elements.name;
     const newItem = {
       name: input.value,
       id: nanoid(),
